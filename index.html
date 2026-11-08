@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IKON Accounting &amp; Advisory | Beyond the Numbers</title>
+<meta name="description" content="IKON Accounting &amp; Advisory is a UK-wide virtual accounting and business advisory practice providing accounting, tax, financial management and strategic advisory services.">
+<meta name="theme-color" content="#102139">
+<style>
+:root{--navy:#102139;--navy-light:#1b304b;--gold:#bd9b5d;--gold-light:#d7bd8c;--white:#fff;--ivory:#f7f6f2;--light:#eeede8;--text:#303943;--muted:#69737d;--border:#e4e2dc}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,90%);margin:auto}
+section{padding:90px 0}
+.section-label{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+.section-heading{color:var(--navy);font-size:clamp(29px,4vw,42px);font-weight:500;line-height:1.2;margin-bottom:22px}
+.section-intro{max-width:740px;color:var(--muted);font-size:17px}
+.gold-line{height:2px;width:55px;background:var(--gold);margin:25px 0}
+header{background:var(--white);position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--border)}
+.navbar{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:Georgia,serif;font-size:35px;letter-spacing:5px;color:var(--navy)}
+.brand-subtitle{font-size:10px;letter-spacing:2.2px;color:var(--gold);margin-top:7px;font-weight:600}
+nav{display:flex;align-items:center;gap:30px}
+nav a{font-size:13px;font-weight:600;color:var(--navy);transition:color .2s}
+nav a:hover{color:var(--gold)}
+.nav-contact{padding:12px 20px;border:1px solid var(--gold)}
+.hero{background:linear-gradient(110deg,rgba(13,29,49,.98),rgba(21,43,67,.93));color:var(--white);padding:125px 0 115px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-160px;top:-180px;width:600px;height:600px;border:1px solid rgba(189,155,93,.22);border-radius:50%;box-shadow:0 0 0 55px rgba(189,155,93,.035),0 0 0 110px rgba(189,155,93,.025);pointer-events:none}
+.hero-content{max-width:820px;position:relative;z-index:2}
+.hero-label{color:var(--gold-light);font-size:12px;font-weight:700;letter-spacing:3px;margin-bottom:25px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(40px,6vw,67px);line-height:1.13;font-weight:400;margin-bottom:25px}
+.hero h1 span{color:var(--gold-light)}
+.hero-description{max-width:680px;color:#d6dde5;font-size:18px;line-height:1.8;margin-bottom:35px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:15px}
+.button{display:inline-block;padding:14px 25px;font-size:13px;font-weight:700;letter-spacing:.5px;transition:.2s;cursor:pointer}
+.button-gold{background:var(--gold);color:var(--navy);border:1px solid var(--gold)}
+.button-gold:hover{background:var(--gold-light)}
+.button-outline{color:var(--white);border:1px solid rgba(255,255,255,.6)}
+.button-outline:hover{border-color:var(--gold);color:var(--gold-light)}
+.brand-strip{background:var(--ivory);padding:23px 0;border-bottom:1px solid var(--border)}
+.brand-strip-inner{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;color:var(--navy);font-size:12px;letter-spacing:1.5px;font-weight:700;text-align:center}
+.brand-strip span{color:var(--gold)}
+.intro{text-align:center}
+.intro .section-intro{margin:auto}
+.intro-highlight{font-family:Georgia,serif;font-size:clamp(24px,3vw,34px);color:var(--navy);margin:32px auto 18px;max-width:850px;line-height:1.4}
+.services{background:var(--ivory)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+.service-card{background:var(--white);padding:34px;border:1px solid var(--border);border-top:3px solid var(--gold);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(16,33,57,.07)}
+.service-number{color:var(--gold);font-size:12px;letter-spacing:2px;font-weight:700;margin-bottom:15px}
+.service-card h3{color:var(--navy);font-size:22px;font-weight:600;margin-bottom:15px}
+.service-card p{color:var(--muted);font-size:14px;margin-bottom:17px}
+.service-card ul{list-style:none;color:var(--text);font-size:14px}
+.service-card li{padding:7px 0;border-bottom:1px solid #f0efeb}
+.service-card li:before{content:"—";color:var(--gold);margin-right:10px}
+.advisory{background:var(--navy);color:var(--white);padding:85px 0}
+.advisory-inner{max-width:850px}
+.advisory h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(31px,4vw,44px);margin-bottom:20px}
+.advisory p{color:#d4dce5;font-size:16px;max-width:760px}
+.advisory .gold-line{margin:25px 0}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:65px;align-items:start}
+.about-copy p{color:var(--muted);margin-bottom:18px}
+.about-panel{background:var(--ivory);padding:35px;border-left:3px solid var(--gold)}
+.about-panel h3{color:var(--navy);font-family:Georgia,serif;font-size:25px;font-weight:400;margin-bottom:20px}
+.value-item{margin-bottom:19px}
+.value-item strong{display:block;color:var(--navy);font-size:14px;letter-spacing:.5px}
+.value-item span{color:var(--muted);font-size:13px}
+.approach{background:var(--ivory)}
+.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:45px}
+.approach-item{border-top:2px solid var(--gold);padding-top:20px}
+.approach-item h3{color:var(--navy);font-size:19px;margin-bottom:12px}
+.approach-item p{color:var(--muted);font-size:14px}
+.contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;margin-top:45px}
+.contact-copy p{color:var(--muted);margin-bottom:18px}
+.contact-detail{padding:18px 0;border-bottom:1px solid var(--border)}
+.contact-detail strong{display:block;color:var(--navy);font-size:13px;margin-bottom:5px}
+.contact-detail a{color:var(--muted)}
+.contact-detail a:hover{color:var(--gold)}
+.registered-office{background:var(--ivory);padding:22px;margin-top:25px}
+.registered-office strong{display:block;color:var(--navy);margin-bottom:8px}
+.registered-office p{font-size:13px;color:var(--muted);margin-bottom:8px}
+.enquiry-form{background:var(--ivory);padding:38px;border:1px solid var(--border)}
+.enquiry-form h3{font-family:Georgia,serif;font-weight:400;color:var(--navy);font-size:29px;margin-bottom:25px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;color:var(--navy);font-size:13px;font-weight:600;margin-bottom:7px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:13px 14px;border:1px solid #d9d8d2;background:var(--white);font-family:inherit;font-size:14px;color:var(--text);outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:125px}
+.required-note{color:var(--muted);font-size:11px;margin-bottom:20px}
+.submit-button{border:none;width:100%;padding:16px;background:var(--navy);color:var(--white);font-family:inherit;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:background .2s}
+.submit-button:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0b192a;color:var(--white);padding:55px 0 25px}
+.footer-main{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:35px}
+.footer-brand{font-family:Georgia,serif;font-size:32px;letter-spacing:4px;margin-bottom:8px}
+.footer-subtitle{color:var(--gold-light);font-size:10px;letter-spacing:2px}
+.footer-description{color:#aeb9c7;font-size:13px;max-width:350px;margin-top:18px}
+.footer-links h4{color:var(--gold-light);font-size:12px;letter-spacing:1px;margin-bottom:15px}
+.footer-links a{display:block;color:#c1cad4;font-size:13px;margin-bottom:9px}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;color:#8f9baa;font-size:11px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.navbar{flex-direction:column;padding:18px 0;gap:18px}nav{justify-content:center;flex-wrap:wrap;gap:17px}.hero{padding:85px 0}.services-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.approach-grid{grid-template-columns:1fr;gap:25px}section{padding:70px 0}}
+@media(max-width:480px){.brand-name{font-size:30px}nav{gap:12px}nav a{font-size:12px}.hero h1{font-size:40px}.service-card,.enquiry-form{padding:25px}.brand-strip-inner{gap:10px;font-size:10px}.footer-main{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="brand">
+      <span class="brand-name">IKON</span>
+      <span class="brand-subtitle">ACCOUNTING &amp; ADVISORY</span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-label">IKON ACCOUNTING &amp; ADVISORY LIMITED</div>
+      <h1>Beyond the numbers.<br><span>Insight. Perspective. Progress.</span></h1>
+      <p class="hero-description">A boutique UK-wide accounting and business advisory practice providing considered financial support, professional expertise and commercial insight to individuals, entrepreneurs and businesses.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="button button-gold">EXPLORE OUR SERVICES</a>
+        <a href="#contact" class="button button-outline">GET IN TOUCH</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="brand-strip">
+  <div class="container brand-strip-inner">
+    <span>ACCOUNTING</span><span>·</span><span>FINANCIAL MANAGEMENT</span><span>·</span><span>BUSINESS ADVISORY</span>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="container">
+    <div class="section-label">THE IKON APPROACH</div>
+    <h2 class="intro-highlight">More than accounting. A considered approach to your finances.</h2>
+    <div class="gold-line" style="margin:25px auto;"></div>
+    <p class="section-intro">At IKON, we believe accounting should do more than meet obligations. It should provide clarity, support better decisions and help individuals and businesses move forward with confidence.</p>
+    <p class="section-intro" style="margin-top:20px;">We combine professional accounting services with a broader understanding of the financial decisions that matter. Our approach is personal, commercially aware and focused on delivering meaningful support.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">WHAT WE DO</div>
+    <h2 class="section-heading">A comprehensive approach to accounting and finance.</h2>
+    <p class="section-intro">From day-to-day accounting and compliance to financial planning and strategic business advice, we provide support designed around your circumstances and needs.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-number">01 / ACCOUNTING</div>
+        <h3>Accounting &amp; Compliance</h3>
+        <p>Reliable accounting support and compliance services, providing a sound foundation for your financial affairs.</p>
+        <ul>
+          <li>Bookkeeping and financial records</li><li>Management accounts</li><li>Year-end accounts preparation</li><li>Self Assessment tax returns</li><li>VAT returns and compliance</li><li>Payroll administration</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02 / FINANCIAL MANAGEMENT</div>
+        <h3>Financial Planning &amp; Control</h3>
+        <p>Greater visibility over financial performance, helping you understand your position and plan ahead.</p>
+        <ul>
+          <li>Budgeting and financial planning</li><li>Cash-flow forecasting</li><li>Financial performance reporting</li><li>Management information</li><li>Financial monitoring and analysis</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03 / ADVISORY</div>
+        <h3>Strategic Finance &amp; Advisory</h3>
+        <p>An experienced financial perspective to support commercial understanding, better decisions and business development.</p>
+        <ul>
+          <li>Virtual Finance Director services</li><li>Board advisory</li><li>Business performance support</li><li>Financial strategy and planning</li><li>Commercial financial insight</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-number">04 / TECHNOLOGY</div>
+        <h3>Digital Accounting &amp; Technology</h3>
+        <p>Practical technology and accounting processes that support more effective financial management.</p>
+        <ul>
+          <li>Making Tax Digital for Income Tax</li><li>Accounting software setup</li><li>Accounting software implementation</li><li>System training and support</li><li>Digital accounting processes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advisory">
+  <div class="container">
+    <div class="advisory-inner">
+      <div class="section-label">BEYOND COMPLIANCE</div>
+      <h2>Understanding the numbers is only the beginning.</h2>
+      <div class="gold-line"></div>
+      <p>Accurate financial information is essential. Understanding what that information means is where it becomes valuable.</p>
+      <p style="margin-top:18px;">We aim to help our clients move beyond simply recording financial activity, towards developing greater financial awareness, stronger control and a clearer perspective on what comes next.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="section-label">ABOUT IKON</div>
+        <h2 class="section-heading">Professional expertise. Personal understanding.</h2>
+        <div class="gold-line"></div>
+        <p>IKON Accounting &amp; Advisory Limited is a UK-wide virtual accounting and business advisory practice, supporting individuals, self-employed professionals and small businesses across the United Kingdom.</p>
+        <p>We operate through a flexible, digitally connected approach, allowing us to work with clients wherever they are based in the UK. You do not need to be local to us to benefit from our support.</p>
+        <p>We believe good accounting is about more than just numbers. It is about giving people clarity, confidence and the support they need to make informed financial decisions.</p>
+        <p>Our approach is straightforward: we take the time to understand your circumstances, explain things in plain English and provide reliable, practical support tailored to your needs.</p>
+        <p>Whether you need help with your tax return, bookkeeping, VAT, payroll, cash flow or wider business planning, we aim to make the financial side of things simpler.</p>
+        <p style="color:var(--navy);font-weight:600;margin-top:25px;">Professional support. Personal understanding. Wherever you are in the UK.</p>
+      </div>
+      <div class="about-panel">
+        <h3>Our values</h3>
+        <div class="value-item"><strong>INTEGRITY</strong><span>Honest, transparent and dependable service.</span></div>
+        <div class="value-item"><strong>KNOWLEDGE</strong><span>Professional expertise applied with care and understanding.</span></div>
+        <div class="value-item"><strong>OPPORTUNITY</strong><span>Helping clients recognise possibilities and make informed decisions.</span></div>
+        <div class="value-item"><strong>NEXT</strong><span>Looking ahead and helping clients take their next step with confidence.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach">
+  <div class="container">
+    <div class="section-label">HOW WE WORK</div>
+    <h2 class="section-heading">A service built around understanding your needs.</h2>
+    <p class="section-intro">We believe the best professional relationships are built on trust, communication and a genuine understanding of what matters to each client.</p>
+    <div class="approach-grid">
+      <div class="approach-item"><h3>Personal attention</h3><p>A considered and approachable service, with attention to your individual circumstances and requirements.</p></div>
+      <div class="approach-item"><h3>Professional perspective</h3><p>Accounting and financial matters approached with professional knowledge, care and commercial awareness.</p></div>
+      <div class="approach-item"><h3>Clear communication</h3><p>Straightforward explanations and practical guidance, helping you understand your financial position.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">START A CONVERSATION</div>
+    <h2 class="section-heading">Let's discuss how we can support you.</h2>
+    <p class="section-intro">Whether you are an individual, self-employed or running a business, we would be pleased to hear from you. Get in touch to discuss your accounting, tax or business advisory requirements.</p>
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <h3 style="color:var(--navy);font-size:21px;margin-bottom:15px;">Contact IKON</h3>
+        <p>If you have a question about our services or would like to discuss how we may be able to help, please get in touch.</p>
+        <div class="contact-detail"><strong>TELEPHONE / WHATSAPP</strong><a href="tel:+447488387546">+44 (0) 748 838 7546</a></div>
+        <div class="contact-detail"><strong>EMAIL</strong><a href="mailto:info@ikonadvisory.co.uk">info@ikonadvisory.co.uk</a></div>
+        <div class="contact-detail"><strong>WEBSITE</strong><a href="https://www.ikonadvisory.co.uk">www.ikonadvisory.co.uk</a></div>
+        <div class="registered-office">
+          <strong>REGISTERED OFFICE</strong>
+          <p>124 City Road,<br>London EC1V 2NX</p>
+          <p>IKON operates as a virtual practice, serving clients across the United Kingdom. Consultations and meetings are arranged remotely, with other arrangements available by prior agreement.</p>
+          <p>This is our registered office address and is not a client-facing office. Visits are by prior arrangement only.</p>
+        </div>
+      </div>
+
+      <div class="enquiry-form">
+        <h3>Send an Enquiry</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required maxlength="100" autocomplete="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required maxlength="254" autocomplete="email" placeholder="Enter your email address">
+          </div>
+          <div class="form-group">
+            <label for="telephone">Telephone Number *</label>
+            <input type="tel" id="telephone" name="telephone" required maxlength="30" autocomplete="tel" placeholder="Enter your telephone number">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Required</label>
+            <select id="service" name="service">
+              <option value="">Please select</option>
+              <option>Bookkeeping</option><option>Management Accounts</option><option>Self Assessment</option><option>VAT Returns</option><option>Payroll</option><option>Year-End Accounts Preparation</option><option>Budgeting and Cash-Flow Forecasting</option><option>Making Tax Digital for Income Tax</option><option>Accounting Software Setup and Training</option><option>Virtual Finance Director</option><option>Board Advisory</option><option>Other Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Enquiry *</label>
+            <textarea id="message" name="message" required maxlength="5000" placeholder="Please tell us briefly how we may be able to help."></textarea>
+          </div>
+          <p class="required-note">* Required fields</p>
+          <button type="submit" class="submit-button">SEND ENQUIRY</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand">IKON</div>
+        <div class="footer-subtitle">ACCOUNTING &amp; ADVISORY LIMITED</div>
+        <p class="footer-description">A boutique UK-wide accounting and business advisory practice. Beyond the numbers. Insight. Perspective. Progress.</p>
+      </div>
+      <div class="footer-links">
+        <h4>QUICK LINKS</h4>
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>CONTACT</h4>
+        <a href="tel:+447488387546">+44 (0) 748 838 7546</a>
+        <a href="mailto:info@ikonadvisory.co.uk">info@ikonadvisory.co.uk</a>
+        <a href="https://www.ikonadvisory.co.uk">www.ikonadvisory.co.uk</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> IKON Accounting &amp; Advisory Limited. All rights reserved.</span>
+      <span>Integrity. Knowledge. Opportunity. Next.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const telephone = document.getElementById("telephone").value.trim();
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !telephone || !message) {
+    alert("Please complete all required fields.");
+    return;
+  }
+
+  const subject = encodeURIComponent("Website Enquiry - IKON Accounting & Advisory");
+  const body = encodeURIComponent(
+    "New enquiry for IKON Accounting & Advisory\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Telephone: " + telephone + "\n" +
+    "Service required: " + (service || "Not specified") + "\n\n" +
+    "Enquiry:\n" + message
+  );
+
+  window.location.href =
+    "mailto:info@ikonadvisory.co.uk?subject=" + subject + "&body=" + body;
+});
+</script>
+</body>
+</html>
